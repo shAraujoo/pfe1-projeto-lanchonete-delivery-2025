@@ -1,1 +1,111 @@
-@import url(./style.css);
+@import url('./style.css');
+
+header {
+    width: 100%;
+    background-color: var(--primary);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: white;
+    font-size: 2rem;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav button {
+    background-color: var(--highlight);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav button:hover {
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.formulario {
+    background-color: var(--background-alt);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.formulario label {
+    font-weight: 600;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.formulario input, .formulario select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--primary);
+    background-color: white;
+}
+
+.formulario button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+    background-color: var(--primary-dark);
+}
+
+.pedidos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.coluna {
+    flex: 1;
+    min-width: 280px;
+    background-color: var(--background-alt);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.coluna:hover {
+    transform: scale(1.02);
+}
+
+.coluna h2 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 10px;
+}

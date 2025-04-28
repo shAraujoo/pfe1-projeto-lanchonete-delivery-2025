@@ -1,1 +1,128 @@
-@import url(./style.css);
+@import url('./style.css');
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: var(--background);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.topo h1 {
+    color: var(--primary);
+    font-size: 2rem;
+}
+
+.btn-voltar {
+    background-color: var(--highlight);
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-voltar:hover {
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+.tabela-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+thead {
+    background-color: var(--primary);
+    color: white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--background-alt);
+}
+
+tr:nth-child(even) {
+    background-color: var(--background-alt);
+}
+
+tr:hover {
+    background-color: var(--highlight);
+    color: var(--text);
+}
+
+.total {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid var(--background-alt);
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        top: 10px;
+        font-weight: bold;
+        color: var(--primary-dark);
+        text-align: left;
+    }
+
+    td:last-child {
+        border-bottom: none;
+    }
+}
